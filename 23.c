@@ -10,10 +10,10 @@ int main(){
     fgets(frase, 50, stdin);
 
     for(i=0;frase[i]!='\0';i++) {
-	    if(!cerveja && frase[i]!=' ') {
+	    if(cerveja==0 && frase[i]!=' ') {
 		    cerveja=1;
 		    total++;
-	    }else if(cerveja && frase[i]==' ')
+	    }else if(frase[i]==' ')
 		    cerveja=0;
         if(isalpha(frase[i])){
 		letra++;
